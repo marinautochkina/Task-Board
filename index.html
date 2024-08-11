@@ -20,11 +20,43 @@
     <h1 class="display-3">Task Board</h1>
     <p class="lead">A simple Kanban board for task management</p>
   </header>
+
   <div class="container">
     <div class="text-center mb-5">
+      <!--Button that triggers modal-->-->
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
-    <!-- Todo: Create a modal with a form to add tasks -->
+   <!-- Modal -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formModalLabel">Add Task</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="task-title" class="col-form-label">Task Title:</label>
+                <input type="text" class="form-control w-4" id="task-title">
+              </div>
+              <div class="mb-3">   <!-- date picker -->
+                <label for="due-date" class="col-form-label">Due Date:</label>
+                <input type="date" class="form-control w-4" id="due-date">
+              </div>
+              <div class="mb-3">
+                <label for="task-description" class="col-form-label">Task Description:</label>
+                <textarea class="form-control" id="task-description"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="add-task-button">Add Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Modal-->
     <div class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
