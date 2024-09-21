@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background-color: beige;
 }
 
 .swim-lanes {
@@ -13,4 +14,10 @@ body {
 
 .task-card:hover {
   cursor: grab;
+}
+.task-card-pastdue {
+  background-color: rgba(207, 73, 73, 0.896);
+}
+.task-card-almost-due {
+  background-color: rgba(182, 216, 79, 0.896);
 }
